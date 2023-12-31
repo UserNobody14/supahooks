@@ -1,18 +1,18 @@
 {
-  "name": "pkg-placeholder",
+  "name": "supahooks",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.12.1",
   "description": "_description_",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Ben Sobel <bsobel@you2date.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-placeholder#readme",
+  "funding": "https://github.com/sponsors/UserNobody14",
+  "homepage": "https://github.com/UserNobody14/supahooks#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+    "url": "git+https://github.com/UserNobody14/supahooks.git"
   },
-  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "bugs": "https://github.com/UserNobody14/supahooks/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -46,6 +46,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.0",
