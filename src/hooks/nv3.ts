@@ -1,7 +1,6 @@
 import type { GenericSchema } from '@supabase/supabase-js/dist/module/lib/types'
 import { useEffect, useState } from 'react'
 import type { SupabaseClientIPlus } from '../interfaces/modded-interface.ts/fullhookinterface'
-import type { WithUse } from '../interfaces/WithUse'
 
 // Wrapper class with Proxy
 export class Wrapper<T extends object, Database, SchemaName extends string & keyof Database = 'public' extends keyof Database

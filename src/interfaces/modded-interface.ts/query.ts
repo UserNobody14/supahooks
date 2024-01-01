@@ -1,4 +1,3 @@
-import type { PostgrestQueryBuilder } from '@supabase/postgrest-js'
 import type { GenericSchema, GenericTable, GenericView } from '@supabase/supabase-js/dist/module/lib/types'
 import type { GetResult } from '@supabase/postgrest-js/dist/module/select-query-parser'
 import type { PostgrestQueryBuilderInterface } from '../postgrest-query-builder'

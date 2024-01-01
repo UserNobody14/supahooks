@@ -1,4 +1,3 @@
-import type { PostgrestClient } from '@supabase/postgrest-js'
 import type { GenericSchema } from '@supabase/supabase-js/dist/module/lib/types'
 import type { PostgrestClientInterface } from '../postgrest-client'
 import type { PostgrestFilterBuilderIPlus } from './filter'
