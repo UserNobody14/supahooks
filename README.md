@@ -6,32 +6,18 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+Making supabase easier with react hooks!
 
-> **Note**:
-> Replace `supahooks`, `_description_` and `antfu` globally to use this template.
+## Examples
 
-## Sponsors
+## Motivation
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+I felt that the existing hooks for supabase didn't meet my standards.
+
+## How it Works
+
+Proxies all calls to the underlying supabase object & its children, intercepting "use" and "callback" requests to return hooks.
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Anthony Fu](https://github.com/antfu)
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/supahooks?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/supahooks
-[npm-downloads-src]: https://img.shields.io/npm/dm/supahooks?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/supahooks
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/supahooks?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=supahooks
-[license-src]: https://img.shields.io/github/license/antfu/supahooks.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/supahooks/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/supahooks
+[MIT](./LICENSE) License © 2023-PRESENT [Ben Sobel](https://github.com/UserNobody14)

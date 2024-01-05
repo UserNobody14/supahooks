@@ -1,6 +1,6 @@
 import type { GenericSchema } from '@supabase/supabase-js/dist/module/lib/types'
 
-type WrapResult<T> = T extends { data: infer U } ? U : never
+export type WrapResult<T> = T extends { data: infer U } ? U : T
 
 export interface WrapHookResponse<U> {
   result: WrapResult<U>

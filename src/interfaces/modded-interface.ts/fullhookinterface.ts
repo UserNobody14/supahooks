@@ -3,12 +3,44 @@
 import type { GenericSchema } from '@supabase/supabase-js/dist/module/lib/types'
 import type { RealtimeChannelOptions } from '@supabase/supabase-js'
 import type { SupabaseClientInterface } from '../supabase-client'
+import type { SupabaseStorageClientInterface } from '../supabase-storage-client'
+import type { SupabaseAuthClientInterface } from '../auth-client'
 import type { PostgrestQueryBuilderIPlus } from './query'
 import type { PostgrestClientIPlus } from './client'
 import type { RealtimeChannelIPlus, RealtimeClientIPlus } from './rtchannel'
 import type { PostgrestFilterBuilderIPlus } from './filter'
 import type { SupabaseAuthClientIPlus } from './auth'
 import type { StorageClientIPlus } from './storage'
+
+// const a: StorageClientIPlus = {} as any
+// const bb = a.createBucket('a')
+// const [bk, bkContext] = a.createBucket('a').callback()
+// const z = bkContext.result
+// const zz = bk();
+
+// const at: SupabaseStorageClientInterface = {} as any;
+// const t1 = at.from('a').upload('a', null).then().then();
+// const t2 = a.from('a').upload('a', null).then().then();
+// const a: SupabaseClientIPlus = {} as any;
+// const [sst, ssv] = a.auth.signOut().callback();
+// sst().then(aw)
+
+// const tt = a.schema('public').from('a').select('*').use();
+// const [eee, e] = a.from('a').select('*').callback();
+// eee().then(aw => aw);
+// e.result
+
+type ImplementationTarget<
+Database,
+SchemaName extends string & keyof Database,
+Schema extends GenericSchema,
+> = Omit<
+SupabaseClientInterface<Database, SchemaName, Schema>,
+'from' | 'storage' | 'auth'
+> & {
+  storage: SupabaseStorageClientInterface
+  auth: SupabaseAuthClientInterface
+}
 
 /**
  * PostgresClientIPlus
@@ -28,7 +60,7 @@ SchemaName extends string & keyof Database = 'public' extends keyof Database
 Schema extends GenericSchema = Database[SchemaName] extends GenericSchema
   ? Database[SchemaName]
   : any,
-> extends Omit<SupabaseClientInterface<Database, SchemaName, Schema>, 'from'> {
+> extends ImplementationTarget<Database, SchemaName, Schema> {
 
   auth: SupabaseAuthClientIPlus
 
